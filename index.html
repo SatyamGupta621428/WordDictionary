@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dictionary App</title>
+    <style>
+        *{
+            padding:0;
+            margin:0;
+            box-sizing: border-box;
+        }
+        body{
+            background-color: rgb(59, 230, 136);
+            text-align: center;
+            margin-top:10%;
+            color:#7057df;
+        }
+        .parentContainer{
+            background-color: #ffffff;
+            width: 90vmin;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            top: 50%;
+            left: 50%;
+            padding: 80px 50px;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(38, 33, 61, 0.2);
+        }
+        .childContainer{
+            width:100%;
+            display: flex;
+            justify-content: space-between;
+        }
+        #inputText{
+            font-size: 16px;
+            width:70%;
+            border:none;
+            outline:none;
+            border-bottom: 3px solid #ae9cff;
+            padding: 5px;
+        }
+        #btn{
+            padding:15px 0;
+            width:25%;
+            background-color: #ae9cff;
+            border:none;
+            outline:none;
+            color: #ffffff;
+            border-radius: 5px;
+        }
+        .result{
+            position:relative;
+        }
+        .result h3{
+            font-size: 30px;
+            color: #1f194c;
+        }
+        .result .word {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 80px;
+        }
+        .result button {
+        background-color: transparent;
+        color: #ae9cff;
+        border: none;
+        outline: none;
+        font-size: 18px;
+        }
+        .result .details {
+            display: flex;
+            gap: 10px;
+            color: #b3b6d4;
+            margin: 5px 0 20px 0;
+            font-size: 14px;
+        }
+        .word-meaning {
+        color: #575a7b;
+        }
+        .word-example {
+            color: #575a7b;
+            font-style: italic;
+            border-left: 5px solid #ae9cff;
+            padding-left: 20px;
+            margin-top: 30px;
+        }
+        .error {
+            margin-top: 80px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>My Dictionary</h1>
+    <audio id="sound"></audio>
+    <div class="parentContainer">
+        <div class = "childContainer">
+            <input type="text" id="inputText" placeholder="Enter your word">
+            <button id="btn">Search</button>
+        </div>
+        <div class ="result" id = "resultDiv"></div>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
+
